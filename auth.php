@@ -15,9 +15,11 @@ echo $sql;
 $user = $result->fetch(PDO::FETCH_ASSOC);;
 var_dump($user);
 
-if(count($user)== 0) {
+if(count($user) == 0) {
     echo "Такой пользователь не найден";
 }
+
+//setcookie('user', $user['name'], time() + 1800, "/");
 
 //header('Location: index.php');
 
