@@ -33,9 +33,12 @@
                 </li>
             </ul>
 
-            <input type="text" placeholder="your login">
-            <input type="text" placeholder="your password">
-            <button class="btn btn-outline-success my-2 my-sm-0">Вход</button>
+            <form action="auth.php" method="post">
+                <input type="text" placeholder="your login" name="login">
+                <input type="text" placeholder="your password" name="psw">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Вход</button>
+            </form>
+
             <a href="registration.php">
             <button class="btn btn-outline-success my-2 my-sm-0">Регистрация</button>
             </a>

@@ -11,9 +11,9 @@
 <body>
     <div class="container md-4">
         <h1>Форма регистрации</h1>
-        <form action="chek.php" method="post" name="login" id="login">
-            <input type="text" class="form-control" name="login" id="login" placeholder="Введите логин"><br>
+        <form action="check.php" method="post">
             <input type="text" class="form-control" name="name" id="name" placeholder="Введите имя"><br>
+            <input type="text" class="form-control" name="login" id="login" placeholder="Введите логин"><br>
             <input type="text" class="form-control" name="psw" id="psw" placeholder="Введите пароль"><br>
             <button class="btn btn-success" type="submit">Зарегистрировать</button>
         </form>
