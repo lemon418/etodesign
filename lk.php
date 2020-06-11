@@ -74,10 +74,11 @@
             $id = $_COOKIE['user'];
             //            var_dump($id);
             include 'db.php';
-            $sql = "SELECT * FROM articles  WHERE `user_id`='$id' ORDER BY id DESC";
+            $sql = "SELECT * FROM articles WHERE `user_id`='$id' ORDER BY id DESC";
             $db -> query($sql);
             $statement = $db -> query($sql);
             $articles = $statement->fetchAll(PDO::FETCH_ASSOC );
+
             ?>
 
             <div class="row">
