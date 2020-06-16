@@ -17,10 +17,10 @@ if(mb_strlen($login) < 3 || mb_strlen($login) > 15) {
 }
 $psw = md5($psw);
 
-$db = new PDO('mysql:host=localhost;dbname=etodesign;charset=utf8', 'root', '');
+include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 $sql = "INSERT INTO `users` (`user_name`, `login`, `password`) VALUES ('$user_name', '$login', '$psw')";
 $db -> query($sql);
 
-header('Location: index.php');
+header('Location: ../index.php');
 
 ?>

@@ -5,7 +5,7 @@
             <?php
             $id = $_COOKIE['user'];
             //            var_dump($id);
-            include 'db.php';
+            include $_SERVER['DOCUMENT_ROOT'].'/config/config.php';
             $sql = "SELECT * FROM articles WHERE `user_id`='$id' ORDER BY id DESC";
             $db -> query($sql);
             $statement = $db -> query($sql);
@@ -15,40 +15,42 @@
 
             <div class="row">
                 <? foreach($articles as $article) { ?>
-                <div class="col-md-4">
-                    <div class="card">
+                    <div class="col-md-4">
+                        <div class="card">
 
-                        <div class="card-body">
-                            <?=$article['text']?>
-                            <?=$article['article']?>
+                            <div class="card-body">
+                                <?=$article['text']?>
+                                <?=$article['article']?>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                <form action="delete.php" method="post">
-                    <div class="form-group">
-                        <div>
-                            <input type="hidden" name="id" value="<?=$article['id']?>">
-                             <button type="submit" class="btn btn-danger">Удалить</button>
-                        </div>
+                    <div class="col">
+                        <form action="models/delete.php" method="post">
+                            <div class="form-group">
+                                <div>
+                                    <input type="hidden" name="id" value="<?=$article['id']?>">
+                                    <button type="submit" class="btn btn-danger">Удалить</button>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="edit.php" method="get">
+                            <div class="form-group">
+                                <div>
+                                    <input type="hidden" name="id" value="<?=$article['id']?>">
+                                    <button type="submit" class="btn btn-success">Редактировать</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
+
+                <? } ?>
             </div>
 
-            <? } ?>
-        </div>
 
-
-        <div class="col">
-            <form action="articles.php" method="post">
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Добавить статью</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text"></textarea><br>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
+            <div class="row">
+                <a href="add.php"><button type="button" class="btn btn-primary">Добавить статью</button></a>
+            </div>
         </div>
     </div>
-</div>
 </div>

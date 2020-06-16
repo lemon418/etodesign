@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT'].'/config/config.php';
+include $_SERVER['DOCUMENT_ROOT'].'/config/config.php';
 ?>
 <html lang="en">
 <head>
@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
+
 <? include_once 'blocks/header.php';?>
-<? include_once 'content/main.php';?>
+<? include_once 'content/lk.php';?>
 <? include_once 'blocks/footer.php';?>
 
 </body>

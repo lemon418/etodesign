@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 $id = $_COOKIE['user'];
 
 $text = $_POST['text'];
@@ -14,6 +14,6 @@ if(isset($_COOKIE['user'])) {
 	echo "Чтобы отправить статью необходимо авторизоваться";
 }
 
-header('Location: ../etodesign/lk.php');
+header('Location: ../lk.php');
 
 ?>

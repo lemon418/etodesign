@@ -1,3 +1,5 @@
+
+
 <header>
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <a href="et-design.com" class="navbar-brand">
@@ -41,7 +43,7 @@
                 <a href="lk.php">
                 <button class="btn btn-outline-success my-2 my-sm-0"> <?= $name ?> </button>
             </a>
-                <a href="exit.php">
+                <a href="models/exit.php">
                     <button class="btn btn-outline-success my-2 my-sm-0">Выход</button>
                 </a>
 

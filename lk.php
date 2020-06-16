@@ -3,7 +3,7 @@
         header('Location:registration.php');
     }
 
-    include_once 'db.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/config/db.php';
 ?>
 <html lang="en">
 <head>
@@ -16,7 +16,7 @@
 <body>
 <? include_once 'blocks/header.php';?>
 
-<? include_once 'content/lk.php';?>
+<a href="myArticles.php"><button>Мои статьи</button></a>
 <? include_once 'blocks/footer.php';?>
 </body>
 </html>

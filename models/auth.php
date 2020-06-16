@@ -1,6 +1,6 @@
 <?php
 //    session_start ();
-include 'db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 
 $login = $_POST['login'];
 $psw = $_POST['psw'];
