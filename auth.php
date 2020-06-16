@@ -23,6 +23,6 @@ if(count($user) == 4) {
     echo "Enter your password correctly";
 }
 
-
+header('Location: "/"');
 
 ?>
