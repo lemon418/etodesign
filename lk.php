@@ -1,4 +1,8 @@
 <?php
+    if($_COOKIE['user'] == "") {
+        header('Location:registration.php');
+    }
+
     include_once 'db.php';
 ?>
 <html lang="en">
@@ -17,5 +21,7 @@
 </body>
 </html>
 
+<?php
 
+?>
 

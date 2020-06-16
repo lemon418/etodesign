@@ -1,4 +1,5 @@
 <?php
+//    session_start ();
 include 'db.php';
 
 $login = $_POST['login'];
@@ -12,10 +13,12 @@ $result = $db->query($sql);
 // echo $sql;
 
 //die();
-$user = $result->fetch(PDO::FETCH_ASSOC);;
+$user = $result->fetch(PDO::FETCH_ASSOC);
 // var_dump($user);
 
 if(count($user) == 4) {
+//    $_SESSION['id'] = $user['id'];
+//    var_dump($_SESSION['id']);
     setcookie('user', $user['id'], time() + 600, "/");
     header('Location: index.php');
     echo "You've logged in";
@@ -23,6 +26,6 @@ if(count($user) == 4) {
     echo "Enter your password correctly";
 }
 
-header('Location: "/"');
+header('Location: /');
 
 ?>

@@ -14,7 +14,7 @@
 <? include_once 'blocks/header.php';?>
 <? include_once 'content/main.php';?>
 <? include_once 'blocks/footer.php';?>
-<p>привет</p>
+<p>прив</p>
 </body>
 
 </html>

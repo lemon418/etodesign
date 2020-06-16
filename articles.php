@@ -14,6 +14,6 @@ if(isset($_COOKIE['user'])) {
 	echo "Чтобы отправить статью необходимо авторизоваться";
 }
 
-header('Location: /lk.php');
+header('Location: ../etodesign/lk.php');
 
 ?>

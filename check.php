@@ -1,4 +1,5 @@
 <?php
+
 $user_name = $_POST['name'];
 $login = $_POST['login'];
 $psw = $_POST['psw'];
